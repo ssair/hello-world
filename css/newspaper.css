@@ -1,0 +1,59 @@
+:root {
+    box-sizing:             border-box;
+    font-size:              calc(0.5em + 1vw);
+    background-color:       #000;
+    --min-page-width:       960px;
+    --max-page-width:       1080px;
+    --min-win-hight:        calc(100vh - 44px - 2rem);
+    --min-win-hight-mobile: calc(100vh - 48px - 2rem);
+}
+
+*,
+::before,
+::after {
+    box-sizing:             inherit;
+}
+
+html, body {
+    height: 100%;
+}
+.sport__container__for__background  {
+    background: #fff;
+}
+
+.sport__container{
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png) repeat;
+    padding: 4rem 2rem;
+}
+
+.sport__main__wrapper {
+    max-width: 1135px;
+    margin: auto;
+    background: rgba(200, 200, 200, .2);
+    min-height: 100vh;
+}
+
+@media (min-width: 700px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr) 23%;
+        grid-template-rows: repeat(5, auto);
+        grid-gap: 1.2rem;
+    }
+}
+
+h1 {
+    font: 50px/1 "Playfair Display SC";
+    text-align: center;
+    background: rgba(200, 200, 200, .6);
+}
+
+@media (min-width: 700px) {
+    h1 {
+        font: 70px/1 "Playfair Display SC";
+    }
+}
+
+main h1, main aside {
+    grid-column: 1 / -1;
+}
